@@ -1,0 +1,437 @@
+
+
+.header{
+    padding: 1.7rem;
+    .bars-hidden{
+    display: none;
+       @include pointer;
+       font-size: 1.8em;
+       
+    }
+
+    .logo{
+        text-decoration: none;
+        color: $color-nohover;
+        @include flex;
+        min-width: 9%;
+        font-size: 3rem; 
+        font-weight: bold;
+        align-items: center;
+        @include pointer;
+        .logo__title{
+            margin: 0 .5rem;
+        }
+        .logo__img{
+            
+            width: 50px;
+            height: 50px;
+        }
+
+    }
+    .logo:hover{
+        color: $color-hover;
+        scale: (1.01);
+    }
+
+    &__menu{
+        @include flex;
+        align-items: center;
+        
+
+        .nav{
+            &__a{
+               @include headerButton;
+               background-color:$sagoga-color;
+               color:  rgb(215 213 213);;
+            }
+            .nav__a:hover{
+                background-color: $background-header;
+                padding:1.1em 1.6em ;
+            }
+
+            
+            
+        }
+    }
+
+    &__user{
+        @include flex;
+        gap:.5rem;
+        
+       i{
+        font-size: 1.5em;
+        @include pointer;
+        padding: .1em;
+       }
+       i:hover{
+        background-color:$background-header;
+        color: #333131;
+        border-radius: 25%;
+        scale: (1.3);
+       }
+       .search-bar{
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(206, 206, 206);
+        
+       }
+
+       .button{
+        @include pointer;
+        color:#c8c7c7;
+        background-color: $sagoga-color;
+        border-radius: 25%;
+       }
+
+
+    }
+///////////////////////////////////////////////////
+   
+    .hidden{
+       
+        position: absolute;
+        z-index: 10;
+        border: #000 solid 2px;
+        border-radius: 10px;
+        background-color: rgb(139, 86, 68);
+        @include flex;
+        flex-direction: column;
+        padding: 5em;
+        top: 0;
+        left:0;
+        @include delaymidsec;
+        visibility: hidden;
+        &__info{
+           
+            .nav-container{
+                display: flex;
+                flex-direction: column;
+                .nav__a{
+                    text-decoration: none;
+                   @include submitcss;
+                   margin: 10px 0;
+                    &:hover{
+                        background-color: $background-header;
+                        scale: (1.15);
+                    }
+                 }
+            }
+            
+            
+        }
+        i{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgb(128, 78, 62);
+            padding: 1rem;
+            border-radius: 25%;
+            cursor: pointer;
+            &:hover{
+                background-color:  rgb(108, 59, 42);
+            }
+        }
+        &.show{
+            visibility: visible;
+        }
+
+    }
+
+    .client{
+        position: absolute;
+        visibility: hidden;
+        z-index: 10;
+        border: #000 solid 2px;
+        border-radius: 10px;
+        background-color: rgb(139, 86, 68);
+        @include flex;
+        flex-direction: column;
+        padding: 20px;
+        top: 0;
+        right:0;
+       @include delaymidsec;
+
+        &__title{
+            font-size: 1.5rem;
+        }
+        i{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgb(128, 78, 62);
+            padding: 1rem;
+            border-radius: 25%;
+            cursor: pointer;
+            &:hover{
+                background-color:  rgb(108, 59, 42);
+            }
+          }
+        
+        .header-form{
+            
+            margin: 1rem;
+            .form__info{
+                margin: 1rem;
+                font-size: 1rem;
+                font-weight: bold;
+
+                
+            }
+            .button-header-form{
+               
+                margin-left: 3rem;
+                input{
+                   
+                     @include submitcss;
+                     
+                     &:hover{
+                        @include sumbithover;
+                    }
+                }
+                a{
+                    
+                    @include submitcss;
+                    &:hover{
+                        @include sumbithover;
+                    }
+                   
+                }
+             
+                
+            }
+        }
+    &.show{
+        visibility: visible;
+    }
+    }
+
+}
+
+.main{
+ padding: .1em;  
+ flex-flow: row wrap;
+ text-align: justify;
+ gap: 1em;
+ font-size: 1.2rem;
+   &__welcome{
+    width: 100%;
+   }
+   
+  
+}
+
+
+h1{
+    @include flex;
+    margin: .6rem;
+    font-weight: 700;
+    font-size: 1.9rem;
+}
+h2{
+    @include flex;
+    margin: .6rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+h3{
+    margin: .6rem;
+    @include flex;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.main__container-cards{
+    width: 100%;
+    
+    
+
+   
+}
+.cards{
+    position: relative;
+    text-align: justify;
+    width: 55%;
+    display:  flex;
+    margin: 1rem auto;
+    flex-flow: row nowrap;
+    align-items: center;
+    background-color:$card-backcolor;
+    padding: 1rem;
+    border-radius: 25px;
+    @include pointer;
+    @include delaymidsec;
+    &:hover{
+        background-color: $card-backcolorhover;
+    }
+
+    .card__title{
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 3rem  ;
+        
+        
+    }
+
+    .img-container{        
+        width: 100rem;
+        height: 20rem;
+        padding-right: 1em;
+        img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        
+        
+        }
+    }
+    &__more{
+        position: absolute;
+        text-decoration: none;
+        color: #333131;
+        right: 40px;
+        bottom: 20px;
+        
+        padding: 0.3rem 1.5rem;
+        border-radius: 11px;
+        //padding: 1rem ;
+    }
+    &__more:hover{
+        background-color: $sagoga-color;
+        color: #fff;
+        scale: (1.1);
+    }
+
+   
+
+}
+
+.hide-form{ // boton de form toggle
+    @include flex;
+   
+    .hide-button{
+        @include pointer;
+        background-color: rgba(175, 119, 60, 0.332);  
+        font-size: 2rem;
+        padding:0 1.4rem;
+        margin:3rem;
+        border-radius: 5px;
+        @include delaymidsec;
+
+        &:hover{
+            color: #fff;
+            background-color:$sagoga-color ;
+            scale: (1.1);
+        }
+    }
+    
+    
+}
+
+// form toggle
+.form{
+    display: none;
+    width: 50%;
+    background-color: $card-backcolor;
+    padding: 3rem;
+    border: solid #333131;
+    border-radius: 25px;
+    &__text{
+        margin: 30px 0;
+    }
+    &__submit{
+      input{
+        @include submitcss;
+        &:hover{
+            @include sumbithover;
+        }
+      }
+    }
+    &__example{
+        font-weight: 500;
+        margin: 15px auto;
+        
+        
+    }
+    
+      
+    
+   
+}
+
+
+//fin de index
+@media screen and (max-width: 84em) { //1200px
+    
+    .header{
+        &__menu{
+            scale: (.8);
+        }
+    }
+   
+.main{
+   
+
+    .cards{
+        width: 80%;
+        scale: (.8);
+        margin: 0 auto;
+        
+    }
+
+
+}
+ 
+}
+
+@media screen and (max-width: 62em) { //980px
+
+   .header{
+        .bars-hidden{
+            display: contents;
+        }
+        &__logo, &__menu, {
+            display: none;
+        }
+        
+   }
+   
+}
+
+@media screen and (max-width: 44em) { //700px
+   
+    .main{
+   
+
+        .cards{
+            width: 100%;
+            margin: 0 auto;
+            .card__title{
+                font-size: 1.1rem;
+                
+            }
+            .card__info{
+                font-size: .8rem;
+            }
+            
+            
+        }
+    
+        .form{
+           
+            width: 100%;
+            &__text{
+                font-size: .8rem;
+            }
+            &__title{
+                font-size: 1.1rem;
+            }
+            form{
+                text-align:center ;
+            }
+        }
+    
+    }
+}
+
+
+
+   

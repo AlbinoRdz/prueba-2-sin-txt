@@ -1,0 +1,48 @@
+$font-Page: "Roboto" ,Arial, Helvetica, sans-serif;
+$background-header: rgb(205, 204, 204);
+$sagoga-color: rgb(108, 59, 42);
+$color-nohover:rgb(214, 212, 212);
+$card-backcolor: rgba(175, 119, 60, 0.332);
+$card-backcolorhover: rgba(175, 119, 60, 0.125);
+$color-hover:#fff;
+@mixin flex{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin pointer{
+    cursor: pointer;
+}
+
+@mixin delaymidsec{
+    transition: all .2s;
+}
+@mixin headerButton{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 1em 1.5em;
+    border: solid 2px black;
+    border-radius: 25px;
+   
+    
+}
+
+@mixin submitcss {
+    
+        background-color:$sagoga-color;
+        color:$color-nohover;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: 700;
+        @include pointer;
+        border: solid 2px #333131;
+        font-size: 1rem;
+        
+}
+@mixin sumbithover{
+    color: #000;
+    background-color:#fff;
+
+}
+
+//fin de index
